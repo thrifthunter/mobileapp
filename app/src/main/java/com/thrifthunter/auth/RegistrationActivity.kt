@@ -50,7 +50,7 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun setAction() {
-        binding.btnSave.setOnClickListener {
+        binding.btnRegister.setOnClickListener {
             val name = binding.edtName.text.toString()
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()

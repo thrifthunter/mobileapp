@@ -6,25 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_marginLeft="8dp"
+    android:layout_marginLeft="16dp"
     android:layout_marginTop="4dp"
-    android:layout_marginRight="8dp"
+    android:layout_marginRight="16dp"
     android:layout_marginBottom="4dp"
     card_view:cardBackgroundColor="@color/primary"
     card_view:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="247dp"
-        android:padding="8dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/img_item_photo"
-            android:layout_width="397dp"
-            android:layout_height="143dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
@@ -36,29 +32,32 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_toEndOf="@id/img_item_photo"
+            android:paddingStart="16dp"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="32sp"
             android:textStyle="bold"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo"
-            tools:text="Name" />
+            tools:text="Nama Produk" />
 
         <TextView
             android:id="@+id/tv_item_description"
-            android:layout_width="379dp"
-            android:layout_height="22dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ellipsize="end"
-            android:textColor="@color/black"
             android:maxLines="5"
+            android:paddingStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_name"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_name"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_item_name"
             card_view:layout_constraintVertical_bias="0.407"
-            tools:text="Description" />
+            tools:text="Akun Penjual" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
