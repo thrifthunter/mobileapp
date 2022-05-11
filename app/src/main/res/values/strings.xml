@@ -4,7 +4,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="show">SHOW</string>
-    <string name="signup">SIGN UP</string>
+    <string name="signup">UBAH DATA</string>
     <string name="change">CHANGE</string>
     <string name="dummy_name">dummy_name</string>
     <string name="dummy_email">dummy_email</string>
@@ -21,7 +21,7 @@
     <string name="camera">CAMERA</string>
     <string name="gallery">PHOTOS</string>
     <string name="upload">UPLOAD</string>
-    <string name="username">username</string>
+    <string name="username">Username</string>
     <string name="description">description</string>
     <string name="refresh">REFRESH</string>
     <string name="retry">RETRY</string>
@@ -34,5 +34,6 @@
     <string name="searchbar">Search</string>
     <string name="dummyharga">Rp 2.000.000</string>
     <string name="namaakun">Nama Akun</string>
+    <string name="ads">VIEW ADS</string>
 
 </resources>
