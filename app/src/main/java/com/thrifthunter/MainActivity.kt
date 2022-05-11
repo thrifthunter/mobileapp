@@ -103,6 +103,10 @@ class ListStoryActivity : AppCompatActivity() {
                 val mIntent = Intent(this, ProfileActivity::class.java)
                 startActivity(mIntent)
             }
+            R.id.favorite -> {
+                val mIntent = Intent(this, FavoriteActivity::class.java)
+                startActivity(mIntent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
