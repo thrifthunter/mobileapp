@@ -7,5 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class StoriesData(
     val name: String,
     val photoUrl: String,
-    val description: String
+    val description: String,
+    val akun: String,
+    val harga: String
 ) : Parcelable

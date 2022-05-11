@@ -29,6 +29,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Thrifthunter">
         <activity
+            android:name=".FavoriteActivity"
+            android:exported="false" />
+        <activity
             android:name=".LauncherActivity"
             android:exported="false" />
         <!--
@@ -45,6 +48,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCvsj_pzNc7mpRLhkdfzn8MAEJypTxx0wE" />
+
         <activity
             android:name=".DetailActivity"
             android:exported="false" />

@@ -27,6 +27,8 @@ class DetailActivity : AppCompatActivity() {
             .load(user.photoUrl)
             .into(binding.detailPhoto)
         binding.detailName.text = user.name
+        binding.akun.text = user.akun
+        binding.harga.text = user.harga
         binding.detailDescription.text = user.description
     }
 
