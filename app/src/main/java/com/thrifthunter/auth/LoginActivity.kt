@@ -19,11 +19,12 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
 import com.thrifthunter.ApiConfig
-import com.thrifthunter.ListStoryActivity
+import com.thrifthunter.MainActivity
 import com.thrifthunter.R
 import com.thrifthunter.ViewModelFactory
 import com.thrifthunter.settings.LoginResponse
 import com.thrifthunter.databinding.ActivityLoginBinding
+import com.thrifthunter.tools.UserPreferences
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -86,7 +87,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                                 val responseBody = response.body()
                                 if (responseBody != null && !responseBody.error) {
                                     loginViewModel.login(responseBody.loginResult.token)
-                                    startActivity(Intent(this@LoginActivity, ListStoryActivity::class.java))
+                                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                                     Toast.makeText(this@LoginActivity, "Successfully Login!", Toast.LENGTH_SHORT).show()
                                 }
                             } else {
@@ -118,7 +119,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun setViewModel() {
-        loginViewModel = ViewModelProvider(this, ViewModelFactory(StoriesPreference.getInstance(dataStore), "")
+        loginViewModel = ViewModelProvider(this, ViewModelFactory(UserPreferences.getInstance(dataStore), "")
         )[LoginViewModel::class.java]
 
         loginViewModel.getUser().observe(this) { user ->

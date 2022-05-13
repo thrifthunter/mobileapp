@@ -2,13 +2,14 @@ package com.thrifthunter.auth
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.thrifthunter.tools.UserPreferences
 import kotlinx.coroutines.launch
 
-class RegistrationViewModel(private val storiesPreference: StoriesPreference) : ViewModel() {
+class RegistrationViewModel(private val mpreference: UserPreferences) : ViewModel() {
 
     fun saveUser(user: UserModel) {
         viewModelScope.launch {
-            storiesPreference.saveUser(user)
+            mpreference.saveUser(user)
         }
     }
 }

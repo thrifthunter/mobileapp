@@ -1,14 +1,15 @@
-package com.thrifthunter.auth
+package com.thrifthunter.tools
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
+import com.thrifthunter.auth.UserModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class StoriesPreference private constructor(private val dataStore: DataStore<Preferences>){
+class UserPreferences private constructor(private val dataStore: DataStore<Preferences>){
 
     fun getStories(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
@@ -47,7 +48,7 @@ class StoriesPreference private constructor(private val dataStore: DataStore<Pre
 
     companion object {
         @Volatile
-        private var INSTANCE: StoriesPreference? = null
+        private var INSTANCE: UserPreferences? = null
 
         private val NAME = stringPreferencesKey("name")
         private val EMAIL = stringPreferencesKey("email")
@@ -55,9 +56,9 @@ class StoriesPreference private constructor(private val dataStore: DataStore<Pre
         private val STATUS = booleanPreferencesKey("state")
         private val TOKEN = stringPreferencesKey("token")
 
-        fun getInstance(dataStore: DataStore<Preferences>): StoriesPreference {
+        fun getInstance(dataStore: DataStore<Preferences>): UserPreferences {
             return INSTANCE ?: synchronized(this) {
-                val instance = StoriesPreference(dataStore)
+                val instance = UserPreferences(dataStore)
                 INSTANCE = instance
                 instance
             }

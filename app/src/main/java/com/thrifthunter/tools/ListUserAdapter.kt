@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.thrifthunter.DetailActivity
-import com.thrifthunter.StoriesData
+import com.thrifthunter.Data
 import com.thrifthunter.databinding.UserItemBinding
 
 class ListUserAdapter: PagingDataAdapter<ListStory, ListUserAdapter.ListViewHolder>(DIFF_CALLBACK) {
@@ -41,7 +41,7 @@ class ListUserAdapter: PagingDataAdapter<ListStory, ListUserAdapter.ListViewHold
             binding.tvItemName.text = user.name
 
             binding.root.setOnClickListener {
-                val dataUser = StoriesData(user.name, user.photoUrl, user.description)
+                val dataUser = Data(user.name, user.photoUrl, user.description, user.akun, user.harga)
                 val intent = Intent(binding.root.context, DetailActivity::class.java)
                 intent.putExtra("User", dataUser)
 

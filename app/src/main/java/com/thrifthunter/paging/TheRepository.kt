@@ -8,7 +8,7 @@ import androidx.paging.liveData
 import com.thrifthunter.settings.ApiService
 import com.thrifthunter.settings.ListStory
 
-class StoriesRepository(private val apiService: ApiService, private val token: String) {
+class TheRepository(private val apiService: ApiService, private val token: String) {
 
     fun getStories(): LiveData<PagingData<ListStory>> {
         return Pager(
@@ -16,7 +16,7 @@ class StoriesRepository(private val apiService: ApiService, private val token: S
                 pageSize = 5
             ),
             pagingSourceFactory = {
-                StoriesPagingSource(apiService,token)
+                ThePagingSource(apiService,token)
             }
         ).liveData
     }

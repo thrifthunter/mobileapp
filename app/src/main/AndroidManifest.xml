@@ -59,7 +59,7 @@
             android:name=".auth.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".ListStoryActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

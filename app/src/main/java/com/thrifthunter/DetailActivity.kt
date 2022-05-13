@@ -22,7 +22,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun setData() {
-        val user = intent.getParcelableExtra<StoriesData>("User") as StoriesData
+        val user = intent.getParcelableExtra<Data>("User") as Data
         Glide.with(applicationContext)
             .load(user.photoUrl)
             .into(binding.detailPhoto)
